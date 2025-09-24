@@ -2,7 +2,7 @@
 <html lang="de">
 	<head>
 		<meta charset= "UTF-8">
-		<link rel="stylesheet" type="text/css" href="Grunstruktur.css">
+		<link rel="stylesheet" type="text/css" href="Homepage.css">
 		<meta name="author" content="2. Gruppe">
 		<meta name="date" content="24.09.2025">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,46 +27,16 @@
 				<textarea name="description" title="Beschreibung" id="description" cols="100" rows="6" placeholder="Beschreibung"></textarea>
 				<br>
 				<br>
-				<input type="submit" value="Hinzufügen">
+				<input type="submit" onclick="pressed()" value="Hinzufügen">
 			</form>
 		</div> 
 		</section>
 		<br>
 		<br>
-		<section>
+		<section id="Lischte">
 			<p>sortieren nach:</p> 
-			<ol id="eventList">
-
-			</ol>
+			<ol id="eventList"></ol>
 		</section>
-
-		<script>
-    const myForm = document.getElementById('createEvent');
-    const eventList = document.getElementById('eventList');
-
-    myForm.addEventListener('submit', function(event) {
-        // Verhindert das Neuladen der Seite
-        event.preventDefault();
-
-        // Holt die Werte aus den Eingabefeldern
-        const title = document.getElementById('title').value;
-        const date = document.getElementById('date').value;
-		const description = document.getElementById('description').value;
-
-        // Prüft, ob die Felder nicht leer sind
-        if (title && date && description) {
-            // Erstellt ein neues Listenelement (<li>)
-            const newEvent = document.createElement('li');
-
-            // Fügt den Text hinzu
-            newEvent.textContent = `<b>${title}</b> <br> Datum: ${date} <br> ${description} `;
-
-            // Fügt das neue Listenelement zur ol-Liste hinzu
-            eventList.appendChild(newEvent);
-
-            // Setzt die Formularfelder zurück
-            createEvent.reset();
-        }
-    });
-</script>
+        <script src="br_skript.js"></script>
     </body>
+</html>
