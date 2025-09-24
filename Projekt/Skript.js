@@ -1,27 +1,33 @@
-const myForm = document.getElementById('createEvent');
-    const eventList = document.getElementById('eventList');
+function pressed(event) {
+    event.preventDefault();
 
-    myForm.addEventListener('submit', function(event) {
-        // Verhindert das Neuladen der Seite
-        event.preventDefault();
+    var title = document.getElementById("name").value;
+    var date = document.getElementById("date").value;
+    var description = document.getElementById("description").value;
 
-        // Holt die Werte aus den Eingabefeldern
-        const title = document.getElementById('title').value;
-        const date = document.getElementById('date').value;
-		const description = document.getElementById('description').value;
+    if (checkInput("name") && checkInput("date") && checkInput("description")) {
 
-        // Prüft, ob die Felder nicht leer sind
-        if (title && date && description) {
-            // Erstellt ein neues Listenelement (<li>)
-            const newEvent = document.createElement('li');
+        var list = document.getElementById("eventList");
 
-            // Fügt den Text hinzu
-            newEvent.textContent = `<b>${title}</b> <br> Datum: ${date} <br> ${description} `;
+        var newItem = document.createElement("li");
 
-            // Fügt das neue Listenelement zur ol-Liste hinzu
-            eventList.appendChild(newEvent);
+        newItem.innerHTML = "Titel: " + title + "<br/> Datum: " + date + "<br/> Beschreibung: " + description + "<br/>";
 
-            // Setzt die Formularfelder zurück
-            createEvent.reset();
-        }
-    });
+        list.appendChild(newItem);
+
+        document.getElementById("createEvent").reset();
+    }
+}
+
+
+function checkInput(identification){
+    let inputFeld = document.getElementById(identification);
+    let inputWert = inputFeld.value;
+
+    if (inputWert === "") {
+        alert("Sie müssen alle Felder ausfüllen, um ein Ereignis hinzuzufügen");
+        return false;
+    } else {
+        return true;
+    }
+}
