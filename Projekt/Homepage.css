@@ -1,0 +1,8 @@
+.eventBox {
+  width: 800px;
+  color: black;
+  background-color: white;
+  border:  1px solid grey;
+  border-radius: 1em 1em 1em 1em;
+  padding: 2em;
+}
