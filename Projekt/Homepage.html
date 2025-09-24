@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<meta charset= "UTF-8">
+		<link rel="stylesheet" type="text/css" href="Grunstruktur.css">
+		<meta name="author" content="2. Gruppe">
+		<meta name="date" content="24.09.2025">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Event-Planer für Musik-Veranstaltungen">
+		<title>Event-Planer</title>
+	</head>
+
+    <body>
+        <Header><h1>🎉 Event-Planer<h1></h1></Header>
+
+		<section>
+			<div class="eventBox">
+			<h2>Neues Event erstellen</h2>
+
+			<form id="createEvent" autocomplete="on">
+				<input type="text" name="title" id="name" title="Titel" size="50" maxlength="50" placeholder="Titel">
+				<br>
+				<br>
+				<input type="date" name="date" id="date" title="Datum" size="50" required>
+				<br>
+				<br>
+				<textarea name="description" title="Beschreibung" id="description" cols="100" rows="6" placeholder="Beschreibung"></textarea>
+				<br>
+				<br>
+				<input type="submit" value="Hinzufügen">
+			</form>
+		</div> 
+		</section>
+		<br>
+		<br>
+		<section>
+			<p>sortieren nach:</p> 
+			<ol id="eventList">
+
+			</ol>
+		</section>
+
+		<script>
+    const myForm = document.getElementById('createEvent');
+    const eventList = document.getElementById('eventList');
+
+    myForm.addEventListener('submit', function(event) {
+        // Verhindert das Neuladen der Seite
+        event.preventDefault();
+
+        // Holt die Werte aus den Eingabefeldern
+        const title = document.getElementById('title').value;
+        const date = document.getElementById('date').value;
+		const description = document.getElementById('description').value;
+
+        // Prüft, ob die Felder nicht leer sind
+        if (title && date && description) {
+            // Erstellt ein neues Listenelement (<li>)
+            const newEvent = document.createElement('li');
+
+            // Fügt den Text hinzu
+            newEvent.textContent = `<b>${title}</b> <br> Datum: ${date} <br> ${description} `;
+
+            // Fügt das neue Listenelement zur ol-Liste hinzu
+            eventList.appendChild(newEvent);
+
+            // Setzt die Formularfelder zurück
+            createEvent.reset();
+        }
+    });
+</script>
+    </body>
