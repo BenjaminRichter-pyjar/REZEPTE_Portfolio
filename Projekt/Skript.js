@@ -62,7 +62,7 @@ function displayEvents() {
 
     for (let i = 0; i < events.length; i++) {
         // Überprüfen, ob der Titel den Suchbegriff enthält
-        if (events[i].title.toLowerCase().includes(suchbegriff)) {  
+        if (suchbegriff ==="" || events[i].title.toLowerCase().includes(suchbegriff)) {  
             let neuerEintrag = document.createElement("li");
             neuerEintrag.innerHTML = "<strong>" + events[i].title + "</strong> - " + events[i].date.toLocaleDateString() + "<br>" + events[i].description;
             liste.appendChild(neuerEintrag);

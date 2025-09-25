@@ -11,7 +11,7 @@
 	</head>
 
     <body>
-        <Header><h1>🎉 Event-Planer<h1></h1></Header>
+        <Header><h1>🎉 Event-Planer</h1></Header>
 
 		<section>
 			<div class="eventBox">
@@ -35,13 +35,13 @@
 		<br>
 		<section id="Lischte">
 			<p>sortieren nach:
-				<select id="Sortierung" onchange="sortierungListe()">
+				<select id="Sortierung" onchange="listenSortierung()">
 					<option value="dateAsc">Datum aufsteigend</option>
 					<option value="dateDesc">Datum absteigend</option>
 					<option value="titleAsc">Titel A-Z</option>
 					<option value="titleDesc">Titel Z-A</option> 
 					</select>
-					<input type ="text" id="Suchfeld" onkeyup="sucheListe()" placeholder="Suche nach Titel...">
+					<input type ="text" id="Suchfeld" onkeyup="suche()" placeholder="Suche nach Titel...">
 			</p>
 			<ol id="eventList"></ol>
 		</section>
