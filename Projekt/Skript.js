@@ -23,6 +23,7 @@ function pressed(event) {
     }
 }
 
+// Sortierung der Events
 function listenSortierung() {
     let sortierung = document.getElementById("Sortierung").value;
 
@@ -43,9 +44,12 @@ function listenSortierung() {
             return b.title.localeCompare(a.title);
         });
     }
+
+    // Aktualisierung der Anzeige
     displayEvents();
 }
 
+// Suchfunktion
 function suche() {
     displayEvents();
 }
