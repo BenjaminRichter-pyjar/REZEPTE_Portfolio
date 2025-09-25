@@ -54,6 +54,7 @@ function suche() {
     displayEvents();
 }
 
+// Anzeige der Events in der Liste
 function displayEvents() {
     let liste = document.getElementById("eventList");
     liste.innerHTML = ""; //Leert die Liste, damit sie neu aufgebaut werden kann
