@@ -27,7 +27,7 @@ function pressed(event) {
 function listenSortierung() {
     let sortierung = document.getElementById("Sortierung").value;
 
-    if sortierung === "dateAsc") {
+    if (sortierung === "dateAsc") {
         events.sort(function(a, b) {
             return a.date - b.date;
         });
@@ -54,6 +54,21 @@ function suche() {
     displayEvents();
 }
 
+function displayEvents() {
+    let liste = document.getElementById("eventList");
+    liste.innerHTML = ""; //Leert die Liste, damit sie neu aufgebaut werden kann
+
+    let suchbegriff = document.getElementById("Suchfeld").value.toLowerCase();
+
+    for (let i = 0; i < events.length; i++) {
+        // Überprüfen, ob der Titel den Suchbegriff enthält
+        if (events[i].title.toLowerCase().includes(suchbegriff)) {  
+            let neuerEintrag = document.createElement("li");
+            neuerEintrag.innerHTML = "<strong>" + events[i].title + "</strong> - " + events[i].date.toLocaleDateString() + "<br>" + events[i].description;
+            liste.appendChild(neuerEintrag);
+        }
+    }
+}        
 
 
 //Extra-Funktion, die checkt, ob die ein Eingabefeld einen Inhalt hat
