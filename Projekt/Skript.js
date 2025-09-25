@@ -1,3 +1,5 @@
+let events = [];
+
 //Funktion wird bei drücken des "Hinzufügen" Buttons aufgerufen
 function pressed(event) {
     event.preventDefault(); //Verhindert die Neuladung der Seite, da sonst die Listeneinträge verschwinden
@@ -10,15 +12,11 @@ function pressed(event) {
     //Kontrolle, ob alle Felder einen Inhalt haben.
     if (checkInput("name") && checkInput("date") && checkInput("description")) {
 
-        var list = document.getElementById("eventList");
+        //Event wird als Objekt in das Array gespeichert
+        events.push({ title: title, date: date, description: description });
 
-        //Fügt neuen Listeneintrag hinzu
-        var newItem = document.createElement("li");
-
-        //Inhalt des neuen Listeneintrags
-        newItem.innerHTML = "Titel: " + title + "<br/> Datum: " + date + "<br/> Beschreibung: " + description + "<br/>";
-
-        list.appendChild(newItem);
+        //Seite wird neu geladen, damit die Liste aktualisiert wird
+        displayEvents();
 
         //Setzt die Eingabefelder wieder zurück
         document.getElementById("createEvent").reset();
