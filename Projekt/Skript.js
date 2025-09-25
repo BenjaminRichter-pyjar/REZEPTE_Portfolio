@@ -13,7 +13,7 @@ function pressed(event) {
     if (checkInput("name") && checkInput("date") && checkInput("description")) {
 
         //Event wird als Objekt in das Array gespeichert
-        events.push({ title: title, date: date, description: description });
+        events.push({ title: title, date: new Date (date), description: description });
 
         //Seite wird neu geladen, damit die Liste aktualisiert wird
         displayEvents();
@@ -22,6 +22,35 @@ function pressed(event) {
         document.getElementById("createEvent").reset();
     }
 }
+
+function listenSortierung() {
+    let sortierung = document.getElementById("Sortierung").value;
+
+    if sortierung === "dateAsc") {
+        events.sort(function(a, b) {
+            return a.date - b.date;
+        });
+    } else if (sortierung === "dateDesc") {
+        events.sort(function(a, b) {
+            return b.date - a.date;
+        });
+    } else if (sortierung === "titleAsc") {
+        events.sort(function(a, b) {
+            return a.title.localeCompare(b.title);
+        });
+    } else if (sortierung === "titleDesc") {
+        events.sort(function(a, b) {
+            return b.title.localeCompare(a.title);
+        });
+    }
+    displayEvents();
+}
+
+function suche() {
+    displayEvents();
+}
+
+
 
 //Extra-Funktion, die checkt, ob die ein Eingabefeld einen Inhalt hat
 function checkInput(identification){
