@@ -34,7 +34,15 @@
 		<br>
 		<br>
 		<section id="Lischte">
-			<p>sortieren nach:</p> 
+			<p>sortieren nach:
+				<select id="Sortierung" onchange="sortierungListe()">
+					<option value="dateAsc">Datum aufsteigend</option>
+					<option value="dateDesc">Datum absteigend</option>
+					<option value="titleAsc">Titel A-Z</option>
+					<option value="titleDesc">Titel Z-A</option> 
+					</select>
+					<input type ="text" id="Suchfeld" onkeyup="sucheListe()" placeholder="Suche nach Titel...">
+			</p>
 			<ol id="eventList"></ol>
 		</section>
         <script src="Skript.js"></script>
