@@ -1,8 +1,56 @@
-.eventBox {
-  width: 800px;
+html{
+  font-family: Arial, Helvetica, sans-serif;
   color: black;
   background-color: white;
-  border:  1px solid grey;
+}
+
+header{
+  border-bottom: 1px solid rgb(194, 194, 194);
+  margin-bottom:30px;
+  padding-left: 20px;
+}
+
+footer{
+  margin-top: 50px;
+  text-align: center;
+  font-size: 0.3cm;
+  color: grey;
+  border-top: 1px solid rgb(194, 194, 194);
+  padding-top: 10px;
+}
+
+section{
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+  padding-left: 20px;
+  padding-right: 30px;
+  border:  1px solid rgb(255, 252, 252);
   border-radius: 1em 1em 1em 1em;
-  padding: 2em;
+  box-shadow: 1px 1px 5px rgba(168, 168, 168, 0.61);
+}
+
+input{
+  width: 100%;
+  height: 30px;
+  margin-bottom: 15px;
+  padding-left : 10px;
+}
+
+textarea{
+  width: 100%;
+  margin-bottom: 15px;
+  padding-left : 10px;
+  padding-top : 10px;
+}
+
+select{
+  width:155px;
+  height: 35px;
+  padding-left : 10px;
+}
+
+#Suchfeld{
+  width: 175px;
 }
