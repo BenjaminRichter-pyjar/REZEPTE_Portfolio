@@ -52,18 +52,20 @@ section{
 }
 
 input{
-  width: 100%;
+  width: 98%;
   height: 30px;
   margin-bottom: 15px;
   padding-left : 10px;
+  padding-right: 10px;
   border-radius: 6px;
   border : 1px solid rgb(194, 194, 194);
 }
 
 textarea{
-  width: 100%;
+  width: 98%;
   margin-bottom: 15px;
   padding-left : 10px;
+  padding-right: 10px;
   padding-top : 10px;
   border-radius: 6px;
   border : 1px solid rgb(194, 194, 194);
@@ -88,7 +90,7 @@ select{
   line-height: 5px;
 }
 #submit{
-  width: 102%;
+  width: 101%;
   height: 30px;
   margin-bottom: 15px;
   padding-left : 10px;
@@ -97,3 +99,4 @@ select{
   border: none;
   border-radius: 6px;
 }
+
