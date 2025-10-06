@@ -47,7 +47,7 @@ section{
   padding-left: 20px;
   padding-right: 30px;
   border:  1px solid rgb(255, 252, 252);
-  border-radius: 1em 1em 1em 1em;
+  border-radius: 6px;
   box-shadow: 1px 1px 5px rgba(168, 168, 168, 0.61);
 }
 
@@ -56,6 +56,8 @@ input{
   height: 30px;
   margin-bottom: 15px;
   padding-left : 10px;
+  border-radius: 6px;
+  border : 1px solid rgb(194, 194, 194);
 }
 
 textarea{
@@ -63,12 +65,16 @@ textarea{
   margin-bottom: 15px;
   padding-left : 10px;
   padding-top : 10px;
+  border-radius: 6px;
+  border : 1px solid rgb(194, 194, 194);
 }
 
 select{
   width:155px;
   height: 35px;
   padding-left : 10px;
+  border-radius: 6px;
+  border : 1px solid rgb(194, 194, 194);
 }
 
 #Suchfeld{
@@ -80,4 +86,14 @@ select{
   padding: 0;
   margin: 0;
   line-height: 5px;
+}
+#submit{
+  width: 102%;
+  height: 30px;
+  margin-bottom: 15px;
+  padding-left : 10px;
+  background-color: rgb(0,0,0);
+  color: white;
+  border: none;
+  border-radius: 6px;
 }
