@@ -67,7 +67,7 @@ function displayEvents() {
             let neuerEintrag = document.createElement("li");
             neuerEintrag.innerHTML = `
                 <h3>${events[i].title}</h3>     
-                <p><strong>Datum:</strong> ${events[i].date.toLocaleDateString()}</p>
+                <p><strong>Datum:</strong> ${events[i].date.getDate()}.${events[i].date.getMonth() + 1}.${events[i].date.getFullYear()}</p>
                 <p> ${events[i].description}</p>
             `;
             liste.appendChild(neuerEintrag);
