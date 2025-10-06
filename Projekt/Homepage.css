@@ -51,6 +51,13 @@ section{
   box-shadow: 1px 1px 5px rgba(168, 168, 168, 0.61);
 }
 
+p{
+  white-space: normal;
+  line-height: normal;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
 input{
   width: 98%;
   height: 30px;
@@ -86,7 +93,7 @@ select{
 #eventList{
   list-style-type: none;
   padding: 0;
-  margin: 0;
+  margin: 10%;
   line-height: 5px;
 }
 #submit{
@@ -99,4 +106,6 @@ select{
   border: none;
   border-radius: 6px;
 }
+
+
 
