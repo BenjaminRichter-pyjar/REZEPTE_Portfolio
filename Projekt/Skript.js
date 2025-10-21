@@ -68,8 +68,7 @@ function displayEvents() {
             neuerEintrag.innerHTML = `
                 <h3>${events[i].title}</h3>     
                 <p><strong>Datum:</strong> ${events[i].date.getDate()}.${events[i].date.getMonth() + 1}.${events[i].date.getFullYear()}</p>
-                <p id="beschreibung"> ${events[i].description}</p>
-            `;
+                <p id="beschreibung"> ${events[i].description}</p> `;
             liste.appendChild(neuerEintrag);
         }
     }
