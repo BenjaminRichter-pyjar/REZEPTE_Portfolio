@@ -1,3 +1,5 @@
+//Richter_Balkenhol_Fischer_Bluemlein
+
 let events = [];
 
 //Funktion wird bei drücken des "Hinzufügen" Buttons aufgerufen
